@@ -25,9 +25,9 @@ mongoose
 app.get("/", (req, res) => {
   res.json({ status: true, message: "Server is up and running!" });
 });
-app.use("/urlshortener/", UrlRouter);
-app.use("/auth/", AuthRouter);
-app.use("/qrcode/", QRCodeRouter);
+app.use("/api/urlshortener/", UrlRouter);
+app.use("/api/auth/", AuthRouter);
+app.use("/api/qrcode/", QRCodeRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
